@@ -18,5 +18,5 @@ Dan
 Challenges 
 - funding and scaling up the projects 
 - challenge is not technologies. but to convince people that we need the technologies and make better use of data. Differences in level of awareness among different teams and data literacy. How to bridge data literacy gaps. 
-- externally, data sharing and privacy. 
+- externally, data sharing and privacy.
 
