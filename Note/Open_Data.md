@@ -27,3 +27,7 @@ Notebook [link](https://github.com/pschmied/opn201/blob/main/opn201-data-optimiz
 - cvs vs orc. the difference is that csv is arranged in row format. If you need 2 columns, Athena still needs to read all rows to grab the 2 columns. By contrast, ORC or Parquet is column-based, arranged by columns. So Athena can just read only the two columns that are needed. Good for optimization
 - "create table as" in Athena (c as query). getting Athena to get a part of the csv file to write to a csv file
 - geospatial format 
+  
+Last points
+- array data with linear algebra operations --> check out zar
+- aws skill builder and certifications 
