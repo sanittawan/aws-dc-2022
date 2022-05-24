@@ -20,6 +20,9 @@ Notebook [link](https://github.com/pschmied/opn201/blob/main/opn201-data-optimiz
 - too small objects leads to too many requests and listing of all objects will take time (unless have way to bucket data)
 - too big leads to downloading more data than needed (check out AWS select)
 - recommend using hive style naming conventions e.g. "type=mobile" "year=2021" can think of it as a column in a tabular data set
-- zipfiles are not recommended for optimization. If tabular, use Parquet and ORG. The goal is to choose a format that accommodates range request
+- zipfiles are not recommended for optimization. If tabular, use Parquet and ORC. The goal is to choose a format that accommodates range request
 
 *Athena*
+- tabular data which needs data, schema, and index
+- cvs vs orc. the difference is that csv is arranged in row format. If you need 2 columns, Athena still needs to read all rows to grab the 2 columns. By contrast, ORC or Parquet is column-based, arranged by columns. So Athena can just read only the two columns that are needed. Good for optimization
+- "create table as" in Athena (c as query). getting Athena to get a part of the csv file to write to a csv file
