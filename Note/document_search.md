@@ -23,6 +23,7 @@ Tradition search returns list of documents, but Kendra can give better answer by
 - textract used for pdf that are not OCR, Rekognition for images, Comprehend etc. 
 - Kendra provides dashboard with metrics such as misses, top search, top key words
 - comparison with Amazon Elasticsearch and Kendra
+- index can be updated according to your customized schedule
 
 ### Steps
 1. create the search index 
