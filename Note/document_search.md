@@ -28,6 +28,7 @@ Tradition search returns list of documents, but Kendra can give better answer by
 - Kendra also come with free tier
 - DIY by going to AWS AI services and Amazon SageMaker
 - or work with AWS professional services and solutions lab
+- it might not be as opened as one thinks. Might need to check the token and access system and connection with Cognito
 
 ### Steps
 1. create the search index 
