@@ -23,3 +23,16 @@ Components include
 - 2nd component: SageMaker model registry 
 - SageMaker Projects basically is a template that encapsulates Pipelines and registry
 - templates should be created by people with DevOps background, architect. Consumers are data scientists
+
+### Demo
+- using SageMaker studio
+- demo "Projects" > create project already populated by many pre-built templates
+- some customers don't use SageMaker end to end, so there are many options for the templates
+- looks like most people use Jenkins, Github (source code), Gitlab
+- can start with pre-built templates and modify it
+- there is also AWS service catalogue with project templates
+- you get 2 repos (model build and model deploy)
+- cloning means cloning to your studio environment
+- basically, you can view a dag in the studio for the steps in the pipeline
+- also has explainability, bias report, and metrics were you have to go to manually approve a model
+- using the pipeline is really helpful in tracing data lineage to understand how the model was trained and the data involved, versioning 
