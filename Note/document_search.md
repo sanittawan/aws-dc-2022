@@ -24,6 +24,10 @@ Tradition search returns list of documents, but Kendra can give better answer by
 - Kendra provides dashboard with metrics such as misses, top search, top key words
 - comparison with Amazon Elasticsearch and Kendra
 - index can be updated according to your customized schedule
+- natural language cabability should enable Kendra to understand grammatically incorrect search phrases
+- Kendra also come with free tier
+- DIY by going to AWS AI services and Amazon SageMaker
+- or work with AWS professional services and solutions lab
 
 ### Steps
 1. create the search index 
