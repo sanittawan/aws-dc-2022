@@ -37,3 +37,5 @@ trainer: Tonny Ouma
 - AWS Glue is the data catalog which stores metadata about the underlying data 
 - ETL should be done with the data producers, not in the mesh
 - producer can be a consumer in the domain of which he is not an expert
+
+Workshop [link](https://catalog.us-east-1.prod.workshops.aws/workshops/25333b91-8f2e-4ae4-b748-a196784e7b71/en-US/configuration/pages)
