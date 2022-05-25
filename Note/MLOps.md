@@ -36,3 +36,4 @@ Components include
 - basically, you can view a dag in the studio for the steps in the pipeline
 - also has explainability, bias report, and metrics were you have to go to manually approve a model
 - using the pipeline is really helpful in tracing data lineage to understand how the model was trained and the data involved, versioning 
+- cost control, security --> think about "ML platform" which is different from the MLOps which is initiated for each project by data scientist etc.
