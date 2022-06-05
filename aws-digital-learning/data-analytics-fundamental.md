@@ -65,9 +65,21 @@ Key service: Amazon S3 ("Simple Storage Service")
     1.1 Traditional approach: data > raw data storage (S3) > data submission scheduled job submission (AWS lambda) > aggregation and load (Amazon EMR) > Warehousing (Amazon Redshift)
     1.2 Alternative approach (using Glue): data > raw data storage (S3) > data submission scheduled job submission (AWS lambda) > aggregation and load (Amazon Glue) > Warehousing (Amazon Redshift)
 
-![batch processing](./screenshots/batch_processing.png){width=50%}
+![batch processing](./screenshots/batch_processing.png)
+
+#### Stream data processing
+- "With streaming solutions, the collection system (producer) and the processing system (consumer) are always separate. Streaming data uses what are called data producers. Each of these producers can write their data to the same endpoint, allowing multiple streams of data to be combined into a single stream for processing. Another huge advantage is the ability to preserve client ordering of data and the ability to perform parallel consumption of data. This allows multiple users to work simultaneously on the same data."
+- main service is Amazon Kinesis. "In stream processing, you use multiple services: one service to ingest the constant stream of data, one to process and analyze the stream, and one to load the data into an analytical data store if required. Amazon Kinesis meets each of these needs, and you can use each Kinesis service independent of the others to create an optimal streaming solution."
+- Example scenario: sensor data > Amazon Kinesis Data Firehose collect sensor data from sensor devices > process data using Amazon Kinesis Data Analytics for real-time result > send only relevant data to Amazon Kinesis Data Firehose to process > send processed/filtered data to S3 > Amazon Athena is used to query data in S3 with SQL > queried data from Athena is then turned into reports and dashboards using Amazon QuickSight
+- streaming analytics is very limited. Due to the size of each data packet and the speed the data is moving, you are limited to simple analytics such as aggregating and filtering the data. Due to this limitation, it is common for businesses to incorporate batch analytics to produce deeper insights into the data before producing dashboards and reports on the data.
+- "In the following architecture, streaming data is collected by the same Amazon Kinesis Data Firehose service seen in the above architecture. This time however, the data is placed directly into an Amazon S3 bucket. A separate process loads user device settings into a second Amazon S3 bucket. AWS Glue is then used to combine the two Amazon S3 data stores and transform them into a single result set, which is loaded into a third Amazon S3 bucket at the Serving Layer."
+
+![stream processing](./screenshots/stream_processing.png)
+
 
 ### Variety
+
+
 
 ### Veracity
 
