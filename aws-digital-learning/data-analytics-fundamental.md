@@ -65,7 +65,7 @@ Key service: Amazon S3 ("Simple Storage Service")
     1.1 Traditional approach: data > raw data storage (S3) > data submission scheduled job submission (AWS lambda) > aggregation and load (Amazon EMR) > Warehousing (Amazon Redshift)
     1.2 Alternative approach (using Glue): data > raw data storage (S3) > data submission scheduled job submission (AWS lambda) > aggregation and load (Amazon Glue) > Warehousing (Amazon Redshift)
 
-![batch processing](./screenshots/batch_processing.png)
+![batch processing](./screenshots/batch_processing.png){width=50%}
 
 ### Variety
 
