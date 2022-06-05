@@ -45,7 +45,27 @@ Key service: Amazon S3 ("Simple Storage Service")
 
 ### Velocity
 
+#### Data processing methods
+1. Batch processing
+    1.1 scheduled
+    1.2 periodic
+2. Stream processing
+    2.1 near real-time: concerns a lot about velocity
+    2.2 real-time: velocity is paramount
 
+#### Data acceleration
+- is the rate at which large collections of data can be ingested, processed, and analyzed
+- example: Take Twitter as an example. Hashtags can become hugely popular and appear hundreds of times in just seconds, or slow down to one tag an hour.
+
+#### Batch data processing
+- "is the execution of a series of programs, or jobs, on one or more computers without manual intervention. Data is collected into batches asynchronously. The batch is sent to a processing system when specific conditions are met, such as a specified time of day. The results of the processing job are then sent to a storage location that can be queried later as needed."
+- Can use Amazon EMR and Hadoop
+- "Apache Hadoop is a scalable storage and batch data processing system. It uses commodity server hardware and provides fault tolerance through software. Hadoop complements existing data systems by simultaneously ingesting and processing large volumes of data, structured or not, from any number of sources, which enables deeper analysis than any one system can provide. These results can be delivered to any existing enterprise system for further use independent of Hadoop."
+- batch processing architecture. 2 options
+    1.1 Traditional approach: data > raw data storage (S3) > data submission scheduled job submission (AWS lambda) > aggregation and load (Amazon EMR) > Warehousing (Amazon Redshift)
+    1.2 Alternative approach (using Glue): data > raw data storage (S3) > data submission scheduled job submission (AWS lambda) > aggregation and load (Amazon Glue) > Warehousing (Amazon Redshift)
+
+![batch processing](./screenshots/batch_processing.png)
 
 ### Variety
 
