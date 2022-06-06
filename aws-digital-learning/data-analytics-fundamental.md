@@ -79,7 +79,7 @@ Key service: Amazon S3 ("Simple Storage Service")
 
 ### Variety
 
-
+#### data structure and types
 
 ### Veracity
 
